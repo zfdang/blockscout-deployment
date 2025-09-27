@@ -49,15 +49,12 @@ fix permission issue
 sudo chown -R 10001:10001 ../runtime/backend/dets
 ```
 
-restart backend
+restart blockscout
 ```
-$ docker-compose restart backend
+$ docker-compose down && docker-compose up -d --build
 ```
 
-6. check logs
-
-```
-docker-compose logs backend --tail=200
-```
+6. Access blockscout
+open http://your_domain
 
 DONE.
