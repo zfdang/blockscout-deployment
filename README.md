@@ -8,7 +8,7 @@ This repo will guide you to deploy blockscout + anvil.
 
 1. Clone blockscout repo & switch to release v8.1.0
 
-``
+```
 $ git clone https://github.com/blockscout/blockscout.git
 $ cd blockscout
 $ git checkout tags/v8.1.0 -b v8.1.0
@@ -21,26 +21,30 @@ $ cd ..
 ```
 $ git clone git@github.com:zfdang/blockscout-deployment.git
 $ cd blockscout-deployment
-$ cp -fr * ../blockscout/
 ```
 
-3. setup anvil
+3. Setup anvil @ this repo
 
 ```
 $ bash anvil_setup.sh
 ```
 
-4. modify docker-compose-customized config
+4. customize your domain @ this repo
 
 ```
-$ cd ../blockscout
 $ bash replace_domain.sh
 ```
 
-5. deploy blockscout & fix permission issue
+5. copy docker-compose-customized to blockscout repo @ this repo
 
 ```
-$ cd docker-compose-customized
+$ cp -fr docker-compose-customized/ ../blockscout/
+```
+
+6. deploy blockscout & fix permission issue @ blockscout repo
+
+```
+$ cd ../blockscout/docker-compose-customized
 $ docker-compose up -d --build
 ```
 
@@ -54,7 +58,7 @@ restart blockscout
 $ docker-compose down && docker-compose up -d --build
 ```
 
-6. Access blockscout
+7. Access blockscout
 open http://your_domain
 
 DONE.
