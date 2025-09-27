@@ -19,7 +19,7 @@ $ cd ..
 2. Clone this repo
 
 ```
-$ git clone git@github.com:zfdang/blockscout-deployment.git
+$ git clone https://github.com/zfdang/blockscout-deployment.git
 $ cd blockscout-deployment
 ```
 
